@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "412329425683",
+    "firebase_url": "https://coolmathgame-1c4d9.firebaseio.com",
+    "project_id": "coolmathgame-1c4d9",
+    "storage_bucket": "coolmathgame-1c4d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412329425683:android:cd03340e126092e9",
+        "android_client_info": {
+          "package_name": "ml.coppellcoders.coolmathgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412329425683-7ign8en0svrja0r8hu6ujdq0nmasr4tr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ml.coppellcoders.coolmathgame",
+            "certificate_hash": "8408e7bd3b957046aa4662571c186c7a812bfd19"
+          }
+        },
+        {
+          "client_id": "412329425683-1nhuagubclqgk7ogjr2gokieidcnlq8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmBbk2EkFAabX8AfPQ49j9NdJbFa6hTM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412329425683-1nhuagubclqgk7ogjr2gokieidcnlq8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
