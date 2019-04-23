@@ -1,5 +1,6 @@
 package ml.coppellcoders.coolmathgame;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,11 +34,20 @@ public class LoginScreen extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.login_button);
 
         mAuth = FirebaseAuth.getInstance();
+        mAuth.createUserWithEmailAndPassword("test2@t.com", "password").addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                Toast.makeText(getApplicationContext(), "One or fields are empty", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!email.getText().toString().isEmpty() && !password.getText().toString().isEmpty()){
+                    Intent i  = new Intent(getApplicationContext(), GameScreen.class);
+                    startActivity(i);
+
                     mAuth.signInWithEmailAndPassword(email.getText().toString().trim(),
                             password.getText().toString().trim()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
