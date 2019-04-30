@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -48,14 +49,20 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!email.getText().toString().isEmpty() && !password.getText().toString().isEmpty()){
-                    Intent i  = new Intent(getApplicationContext(), GameScreen.class);
-                    startActivity(i);
 
                     mAuth.signInWithEmailAndPassword(email.getText().toString().trim(),
                             password.getText().toString().trim()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
+                            Intent i  = new Intent(getApplicationContext(), GameScreen.class);
+                            startActivity(i);
+                            finish();
 
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            e.printStackTrace();
                         }
                     });
 

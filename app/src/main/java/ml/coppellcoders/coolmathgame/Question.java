@@ -12,6 +12,12 @@ public class Question {
 
     public Question() {
         operators = new String[4];
+<<<<<<< HEAD
+=======
+        operand1 = random.nextInt(101);
+        operand2 = random.nextInt(101);
+        operator = random.nextInt(4);
+>>>>>>> 3e192815c9f329a9761531a9bb64951714e1f2d1
         operators[0] = "+";
         operators[1] = "-";
         operators[2] = "*";

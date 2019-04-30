@@ -31,7 +31,11 @@ public class GameScreen extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 if(answer.getText().toString().equals(Integer.toString(q.getAnswer()))){
+=======
+                if(answer.getText().toString().equals("")){
+>>>>>>> 3e192815c9f329a9761531a9bb64951714e1f2d1
                     correctOrNot.setText("CORRECT!");
                     correctOrNot.setVisibility(View.VISIBLE);
                     question.setText(q.getQuestion());
