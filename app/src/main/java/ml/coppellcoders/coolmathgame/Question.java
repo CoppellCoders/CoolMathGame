@@ -11,6 +11,7 @@ public class Question {
     Random random = new Random();
 
     public Question() {
+        operators = new String[4]
         operand1 = random.nextInt(101);
         operand2 = random.nextInt(101);
         operator = random.nextInt(4);
