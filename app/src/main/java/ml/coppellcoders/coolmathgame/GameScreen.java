@@ -2,6 +2,7 @@ package ml.coppellcoders.coolmathgame;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,6 +25,20 @@ public class GameScreen extends AppCompatActivity {
 
         String sampleQuestion = "2+2 = ?";
         String sampleAnswer = "4";
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(answer.getText().toString().equals()){
+                    correctOrNot.setText("CORRECT!");
+                    correctOrNot.setVisibility(View.VISIBLE);
+
+                }else{
+                    correctOrNot.setText("INCORRECT");
+                    correctOrNot.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
     }
 }
