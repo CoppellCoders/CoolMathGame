@@ -38,8 +38,11 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(getApplicationContext(), "One or fields are empty", Toast.LENGTH_SHORT).show();
+
             }
         });
+        Intent i  = new Intent(getApplicationContext(), GameScreen.class);
+        startActivity(i);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

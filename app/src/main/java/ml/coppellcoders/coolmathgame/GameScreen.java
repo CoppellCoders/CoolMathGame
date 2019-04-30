@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class GameScreen extends AppCompatActivity {
 
     private TextView question;
@@ -23,15 +25,16 @@ public class GameScreen extends AppCompatActivity {
         submitButton = (Button)findViewById(R.id.submit);
         correctOrNot = (TextView)findViewById(R.id.correct_or_not);
 
-        String sampleQuestion = "2+2 = ?";
-        String sampleAnswer = "4";
+        final Question q = new Question();
+        question.setText(q.getQuestion());
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(answer.getText().toString().equals()){
+                if(answer.getText().toString().equals(Integer.toString(q.getAnswer()))){
                     correctOrNot.setText("CORRECT!");
                     correctOrNot.setVisibility(View.VISIBLE);
+                    question.setText(q.getQuestion());
 
                 }else{
                     correctOrNot.setText("INCORRECT");

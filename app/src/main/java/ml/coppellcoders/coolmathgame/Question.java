@@ -11,10 +11,7 @@ public class Question {
     Random random = new Random();
 
     public Question() {
-        operators = new String[4]
-        operand1 = random.nextInt(101);
-        operand2 = random.nextInt(101);
-        operator = random.nextInt(4);
+        operators = new String[4];
         operators[0] = "+";
         operators[1] = "-";
         operators[2] = "*";
@@ -38,7 +35,10 @@ public class Question {
     }
 
     public String getQuestion() {
-        String question = operand1 + " \n" + operators[operator] + " \n" + operand2 + " \n =";
+        operand1 = random.nextInt(101);
+        operand2 = random.nextInt(101);
+        operator = random.nextInt(4);
+        String question = operand1 + " " + operators[operator] + " " + operand2 + "  =";
         return question;
     }
 
